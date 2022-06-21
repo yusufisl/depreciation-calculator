@@ -21,8 +21,8 @@ export default function Home() {
           <Tab className="flex-1 py-2 px-4 border-white cursor-pointer text-xl focus:outline-0" selectedClassName="bg-[#61fbc0] text-gray-800">Unit of Activity</Tab>
         </TabList>
 
-        {tabContents.map((Component) => (
-          <TabPanel>
+        {tabContents.map((Component, i) => (
+          <TabPanel key={i}>
             <Component />
           </TabPanel>
         ))}

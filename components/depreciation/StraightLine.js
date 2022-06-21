@@ -67,7 +67,7 @@ export default function StraightLine() {
                 </thead>
                 <tbody>
                   {depreciation.rows.map((row) => (
-                    <tr>
+                    <tr key={row.year}>
                       <td className="py-2 px-4 border border-gray-300 text-center">{row.year}</td>
                       <td className="py-2 px-4 border border-gray-300">{currencyFormatter(row.bv_start)}</td>
                       <td className="py-2 px-4 border border-gray-300">{currencyFormatter(row.accumulated_depreciation)}</td>
